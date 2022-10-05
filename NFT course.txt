@@ -1,0 +1,242 @@
+NFT course (create your own NFT from scratch):
+
+Content:-
+Fungible vs non fungible 
+why NFT ?
+what is NFT ?
+working of NFT
+Examples of NFT
+why NFT is so much popular ?
+Advantages of NFT
+Features of NFT
+Myths of NFT
+ERC721 
+ERC20 vs ERC721
+OpenZeppline
+
+Fungible: The quality of an asset that can be exchanged with another asset of the same type.
+
+Examples: two 5 Rs note,
+5 kg gold ,
+two same brand toothpaste.
+
+Non-Fungible: The quality of an asset that are similar but not exchangeable.
+
+Examples: two houses,
+two cars of different brand,
+art, real estate, sports card.
+
+
+Fungible and non-Fungible -- Value
+
+Value - The amount that an open market is prepared to pay for something.
+
+The value of things is determined by the following factors-
+-> Feel while purchasing
+-> Demand and Supply
+-> Quality- Good or Bad
+-> Usefulness
+
+Why NFT is needed ?
+
+Trading of Physical Items:
+Ex: if you buy gold from a shop by giving some money. The shopkeeper will give you a recipt along with gold, which decides your ownership of that gold (i.e ki ye gold aapne kahi se chori nahi kiya he, kahi se  uthaya nahi he or ye aapne isi shop se liya he).
+
+Advantages of Trading of Physical items-
+-> Supply and demand is maintained
+-> Ownership 
+
+Trading of digital items:
+
+Problem is that it can be copied.
+
+Q.1) What is the issue with copying of digital items ?
+
+    Supply>>>>>Demand -> Price less
+
+    Loss of Ownership
+
+This thing is changed by NFT.
+
+What is NFT?
+
+-> In layman terms NFT is a kind of collectible, similar to a polemon card or painting.
+
+-> The procedure of converting your work in an NFT is called minting.
+
+What makes NFT unique ?
+
+-> The tech behind NFTs which is parallel to the cyptocurrencies such as Ethereum and Bitcoin as it depends on Blockchian.
+
+	Blockchain is tranding
+	these days people wants to invest in cryptocurrencies.
+And NFT is also at the end a cryptocurrency (its a token, which also comes under cryptocurrency).
+
+-> Non Fungible
+-> Feeling of ownership. Since transaction is recorded on Blockchain.(trust factor)
+-> These cannot be segmented into smaller parts. (cannot be copy pasted therefore supply chain is maintained). Agar mene NFT nikali to wo kitni hogi (10 12 15) ye me decide karunga
+-> Supply is limited.
+
+
+Working of NFT :
+
+NFT attaches the art(digital item) with an ID (unique) ---> this generates an NFT.
+This item is not stored on blockchain as storing it on blockchain is very costly. We store it on either server or IPFS.
+
+Now you can attach a different ID with the same same digital item to produce another NFT.
+
+Both the NFT produced are not equal.(Non fungible token) 
+
+
+Most popular NFT:-
+
+Crypto Kitties -https://www.cryptokitties.co/
+CryptoPunks - 
+https://www.larvelabs.com/cryptopunks
+
+CryptoKitties - we breed two kitties(NFT) to produce another kitty (NFT)
+
+Its like you own an avatar which is owned by only you.
+
+Why NFTs are so popular?
+
+The component that makes NFT so popular its provide validation of authenticity.(ye jo saaman he ye mera he)
+
+A photo signed by your favorite celibrity will have more value then a normal unsigned photo.
+
+Note: We dont buy because of logical reasons we buy for emotional reasons. (Psychology plays role)
+
+
+
+Features of NFT:-
+
+indivisible
+indestructible(as it is on blockchain)
+Verifiable(as it is on blockchain)
+Non-interchangeable
+
+NFT allows:-
+
+Buying of digital items
+selling of digital items
+verifying of ownership of digital items
+
+
+Advantages of NFT:-
+
+Cannot be robbed
+Verifiable
+Ensures copyright
+Transferable
+
+
+Other uses of NFT:
+
+Driving License
+Certificate
+Other documents
+Games
+
+
+Myths related to NFT
+
+Myths 
+-> with NFTs a buyer gets the ownership of an item
+-> NTFs give royality
+-> NFT items cannot be copied
+-> NFT generates cash flow
+-> NFT are liquid
+-> NFTs are always limited
+-> NFT can only be minted by us.
+-> NFT guarantees for an item
+-> NFTs are always decentralized
+-> NFTs can never be blocked
+
+Reality
+-> They might be simply getting a version that is digitally signed by the creator.
+-> NFTs do not provide you with royality.
+-> NFT items can be copied
+-> NFT can only be sold
+-> NFT are not liquid
+-> Anybody can mint any number of NFT
+-> Public blockchain split can create replication of NFT
+-> Token ID link to image not guaranteed.
+-> NFT might not be decentralized
+-> NFTs can be blocked.
+
+NFT marketplace:
+Some of the NFT marketplace are:-
+	Open sea
+	Known Origin
+	The nifty gateway
+	Super Rate
+	Atomic Assets
+
+
+
+ERC standards for NFT:(inka use karke NFT banti he)
+
+ERC 721   (mainly iska use hota he)
+ERC 1155
+ERC 994
+ERC 809
+ERC 420
+
+ERC 721 : It implements a standard interface between applications and smart contract driven tokens on Ethereum.
+
+Some important functions of ERC721 - 
+	Token Transfer
+	Approval
+	Owner of tokens
+	Balance of tokens
+
+
+ERC20 vs ER721
+refer video: Fungibility, Ownership, Uniqueness, Examples.
+
+
+OpenZeppelin:-
+refer video
+
+
+
+We are going to learn...
+ERC721
+Openzeppelin
+IPFS (Pinata : refer video)
+Web3.js
+ehter.js
+Hardhat (refer video)
+Alchemy (Blockchain API : refer video)
+
+1) Create project in Alchemy.
+2) Create a folder NFTDEMO.
+3) run npm init
+4) run npm install --save-dev hardhat
+5) npm hardhat
+6) enter
+7) npm install @openzepplin/contracts
+8) Create two folders in NFTDEMO - scripts and contracts
+9) Create MyNFT.sol in contracts
+
+refer video (50:00)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

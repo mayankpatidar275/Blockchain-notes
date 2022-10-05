@@ -1,0 +1,144 @@
+Notes (tut 4) :-
+
+create folder 
+open git bash in that folder
+git status   ------> most important command ... rat lo
+git init     ------> khali repository bana deta he
+git add --a  ------> to put all the files on stage
+git commit -m "initial commit ok"  ------> "initial commit ok" is a msg, photo khich chuka he
+git log      ------> to see all the commits
+git add test.txt  -----> adding file to stage for getting commited
+
+
+tut 5 :-
+
+rm -rf .git  ------> khatarnak command.. delete the content of the folder (.git)...  .git ke andar sari repository ka content hota he
+ab ye git repository nahi rahi... ab tracking ni hori iski...
+
+Cloning a Remote Git Repository from GitHub
+git clone https://github.com/tensorflow/tensorflow.git  -------> tensorflow naam ki directory ban jaegi or saara content pull hoke yaha aaega
+
+pwd
+ls
+cd
+-----> basic commands
+
+
+tut 6 :-
+File status lifecycle ---
+
+Ek folder he jisko git track karra he jiske andar .git(iske andar saari version control ki info hoti he, command dene pe ye file ugalta jata he) he usi ko repository kahate he 
+
+Refer diagram and video.
+
+
+tut 7 :-
+.gitignore: Ignoring Files in Git
+
+touch error.log  -----> command to create file.
+touch .gitignore
+put "error.log" in .gitignore file to ignore error.log file.
+
+put *.log in .gitignore file to ignore all the files with .log .
+
+to ignore a folder(name dir) put "dir/" in .gitignore .
+
+by default git ignores the empty folder.
+
+
+tut 8 :-
+Git Diff: Showing Changes Between Commits/Staging Area & Working Directory
+
+git diff  ------>  Staging area ko working directory se compare karta he.
+git diff --staged   ------>  compare karta he pichle commit ko abhi ke staging area se.
+git add .  ------> To add modified file in staging area again 
+
+
+tut 9 :-
+Git: Skipping The Staging Area
+git commit -a -m "Direct commit"    -------> saari tracked files ko stage karke unka commit bana deta he...lekin agar koi untracked file he to usko specifically add karna padega staging area me, direct commit nahi kar sakte.
+
+
+tut 10 :-
+Moving and Renaming Files In Git
+git rm third.txt  ------->  this command will remove the file and then stage.
+git mv first.txt first_rename.txt   ------->   rename karke staging area me bhi daal dega
+git rm --cached db.accdb    -------> untack the file
+
+
+tut 11:-
+Git Log: Viewing & Changing Commits In Git
+git log -p   ------->   us commit me kya change (remove) hua he wo bhi bataega  (matlab diff bhi dikhaega)
+git log -p -2   ------->  2 commit dikhaega along with there diff
+git log --stat  --------> short me bataega ki kya hua he us commit me.
+git log --pretty=oneline  -------> ek line me dikha dega commit. 
+git log --pretty=short  -------> short me dikha dega commit. 
+git log --pretty=full  -------> thodi information or dikhaega 
+ 
+Author -> jisne wo file banai he.
+Commiter -> jisne usme changes kiye he
+git log --since=2.days  --------> pichle 2 din/ months/ weeks/ years ke dikhaega...its like filter in git log
+git log --pretty=format:"%h -- %an"   --------> git log ka output is formate me dikhado. Search documentation for different formates.
+git commit --amend  -------> purane commit me change karne ke liye
+
+
+tut 12:-
+Unstaging & Unmodifying Files In Git
+git restore --staged first_renamed.txt   ------>  unstage the file
+git checkout -- first_renamed.txt   ------> jo bhi change kiya wo sab kuch hata kar pichle commit se usko change kardega. 
+git checkout -f  ------> lose all the changes you made or aapko apke pichle commit pe pohcha dega.
+
+
+tut 13:-
+GitHub: Working with Remote Repositories
+git remote  ------> 
+remote -> ek website/ repository jo ki internet par he
+git remote add origin git@github.com:mayankpatidar275/Hardhat.git   ------>
+git remote -v   -------->
+creating new repository...
+generating ssh key...
+after generating ssh key and creating repository this command...git push -u origin master... will push the code to github
+
+
+tut 14:-
+Setting Alias In Git
+git config --global alias.unstage 'restore --staged --'   ------> Now we can use 'unstage' instead of 'restore --staged --'
+
+
+tut 15:-
+Git: Creating & Switching Branches In Git
+Note: git restore this.txt -------> khatarnak command... use carefully.. saare changes ko discard kardeta he
+git checkout -b develop   ------->  nai branch banaega or usme lejaega
+git checkout master   ---------> purani state me waapas aajaenge...jo develop me changes kiye the wo nhi dikhenge... uske liye firse develop(jsut a name) me jana padega...note: gitignore me jo bhi files ho unpe kuch bhi karo, dono branch me same hi dikhegi
+git checkout develop  ------> is baar -b nhi laga... -b tab lagta he jab branch pehle se na ho
+git branch   -------->  saari branch aa jaegi
+note: branch by default github pe push nhi hogi...karni padti he 
+
+
+tut 16:-
+Branching & Merging a Production Grade Project
+Recommendation :- do commit the changes before changing branch
+git merge tryCleanup -------->  merge the tryCleanup branch , it will show merge conflict , like dono me se ek cheez chuno 
+Refer video while doing 
+
+
+tut 17:-
+Resolving Merge Conflicts (With Example) 
+Merge Conflict  -------> matlab aapne merge kari koi branch or git usko merge nhi kar paya.
+Refer video for detail.
+Branch management ----->
+git branch -v ------->
+git branch --merged -------> already merged branches
+git branch --no -merged  -------> not ...
+deleting branch
+git branch -d develop ------> gives error if develop is not merged
+........... -D ......  ------> no error and deleted
+ 
+
+tut 18:-
+Git Branching Workflow in Production 
+
+
+
+
+

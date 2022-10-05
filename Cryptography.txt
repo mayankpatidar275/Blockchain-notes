@@ -1,0 +1,13 @@
+Cryptography
+Hi Friend ---> Encryption ---> Dedf#op ---> Decryption Hi --->Friend
+
+Types :
+
+Symmetric and Asymmetric 
+Symmetric:-
+sender sends key along with data to encrpt...but it can be still hacked. 
+
+Asymmetric key cryptography.
+Concept of Public and Private key.
+
+Cryptography in blockchain

@@ -1,0 +1,32 @@
+lets mine our own ether using geth.
+
+Contents
+
+what is geth 
+creating private network 
+mining ehter
+
+Geth is a software helps us to become the node of ethereum network and communicate.
+
+Defination: Geth(Go Ethereum) is a command line interface for running ethereum node implemented in Go Language.
+Using Geth we can join Ethereum network, transfer ether between accounts or even mine ethers.
+
+Installation:
+Starts connecting you with the peers and brings the blocks to your system.
+Requires more space (512 gb).
+
+Running geth on fast sync mode: only brings some part of the blockchain i.e header.
+Full sync mode: brings the complete blockchain.
+Requires lots of space and time...might take 2 to 3 weeks.
+
+Keeping geth running in one terminal and using other terminal to interact with the blockchain (creating the account and several other operations)
+
+You can see the blocks of the blockchain in the folder(chaindata) in the form of files.
+
+
+Creating our own private network:
+creating genesis.json
+We need to provide the chain id, which doesnt exist already.
+
+
+Minig ether:

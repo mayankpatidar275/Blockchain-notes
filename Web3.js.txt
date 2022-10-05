@@ -1,0 +1,153 @@
+Web3.js Course:
+
+Overview:-
+web3.js
+modules
+web3.js with chrome console
+abi and bytecode
+compilation
+deployment
+
+Prerequisites:-
+
+Blockchain
+Ethereum
+Solidity
+JavaScript
+
+Software requirements:-
+NodeJs
+Ganache
+VS code
+
+Web3.js :- web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+(It is just a collection of libraries, with the help of which we can interect with ethereum node)
+
+web3.js acts as an interface between real world(application) and blockchain world(smart contract).
+
+ehtereum node se interact karna matlab blockchain se interact karna, bacause ethereum node blockchain rakhta he.
+
+
+1) Inside our App.js(import getWeb3 from "./getWeb3"), with the help of web3.js we use the set and get functions present in demo.sol file.
+
+2) We are able to call fuctions of demo.sol in App.js with the help of web3.js
+
+
+Now we will see how we will interact with ganache using web3.js...
+Installation of web3
+Import web3
+To connect with Ganache
+To get the balance of an account
+To convert wei into ether
+To transfer ether from one account to another
+
+
+1) We will create a folder web1
+2) run command npm init -y (-y means automatically gives yes to all).
+3) this will create a package.json file in web1.
+4) Now install web3.js in package.json by command npm install -save web3
+5) Now run command node , to start node terminal
+6) Now we will see how to import web3.js
+7) let Web3= require("web3");
+8) run Web3 to check.
+9) Now we will create the object.
+10) let web3 = new Web3(new Web3.providers.HttpProvider("ganache ka url"));
+11) run web3 to check.
+12) Now we will check how to fetch the balance of an account in ganache.
+13) web3.eth.getBalance("address copy here").then(console.log);
+14) To get it in the ether.
+15) web3.eth.getBalance("address copy here").then(function(result){console.log(web3.utils.fromWei(result,"ether"));});
+16) Transferring ether from one acc to other.
+17) web3.eth.sendTransaction(from:"address", to:"address", value:web3.utils.toWei("5","ether"));
+
+Source: web3.js documentation.
+
+check document given(description) for all the commands used
+
+
+Now we will see web3.js interaction with smart contract.
+-> Connect Remix ide with Ganache
+-> Function call
+-> Set value in Function
+
+1) select web3 provider in environment
+2) Enter URL of Ganache 
+3) Now its connected to our ganache. all the addresses are same as of ganache. We can deploy it from remix.
+
+4) Now we will do it through web3.js
+5) Open vs code 
+6) start node in terminal
+7) import web3.js and create object.And connect with ganache.
+8) Now we will create a contract variable 
+(to point this contract to the contract whose abi and address we provide).refer video if req...abi and address taken from remix.
+9) Now we will call contract functions.
+10) contract.methods.x().call().then(console.log); returns 10
+11) now we will set the value;
+12) contract.methods.set(90).send({from:"address"});
+return 90
+13) remix ide me bhi 90 show karega.
+
+
+Now we will see how does our browser interact with smart contract with the help of web3.js
+
+1) we will connect our browser to smart contract.
+2) create html file .
+3) install a package npm install web3.js-browser.
+4) import it in html file. no need to remember...check the link in description.
+5) open file in chrome 
+6) open console
+7) chenk if the package was installed or not...enter Web3 in console.
+8) Now we do not need to install 
+9) create the object.
+10) connect to ganache.
+11) call the fuctions to get all the accounts of ganache.
+12) Earlier metamask also use to use web3 to connect with blockchain whenever your page gets reloaded. But now due to security reasons it does not do that.
+check the link in description.
+13) All the methods will work from here in console also.(creating contract instance)
+Previously we used node.
+
+
+Now we will Generation of ABI and Byte code using web3.js
+
+1) create a folder with two files - demo.sol and web_new.js
+2) we require solc.
+3) check description.
+4) to read the demo.sol in web_new.js we will use fs.
+5) we will require web3 to connect with ganache (for deployment)
+5) read file content
+6) you can also check it in console
+7) give input to solc (compiler)...check description.
+8) take output form solc and convert it to json form.
+9) Now we will fetch abi and bytecode using this output.
+10) you can check it in console (console.log).
+11) Now we need to install packages...npm install solc fs web3 (try doing one by one if error).
+12) node web_new.js
+
+
+Now we will see how to deploy our smart contract using web3.js
+
+1) firstly we sill create contract instance in web_new.js
+2) print all accounts of gancache in console.
+3) we will take(fetch) one acc to deploy the contract.
+4) Now the code becomes complex (due to use of jsx or pata ni kya kara) (deploy function)
+5) truffle he to itna mehnat karna nhi hota he. Just trying to do it from scratch.
+
+
+....Completed....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+Why IPFS ?
+
+Decentralized application:
+If we starts storing large files like images and videos on blockchain, it would require high gas fees (i.e., it would be very costly).
+Alternate solution -> connect your dapp with server which will store your data on database.
+But but but doing so will hamper the essense of blockchain i.e., decentralisation.
+So the solution for this problem is IPFS.
+
+What is IPFS ?
+-> IPFS (InterPlanetary File System) is a peer to peer, decentralized and distributed filesystem.
+
+-> IPFS uses DHT(distributed hash table) and Merkle DAG(directed acyclic graph) data structures.
+->It uses a protocol similar to BitTorrent to decide how to move data around the network.
+-> It uses Content Addressing rather than Location Addressing.
+
+
+Location Addressing :
+You use a Uniform resource locator (URL) to send the request to the server.
+It locates the website on the server.
+
+It doesnt goes like that in IPFS.
+Whenever you upload any file on IPFS, it performs hashing on it (generally uses SHA256) and gives the hash.
+Now to identify that particular entity we use its hash instead of location.
+
+
+IPFS vs HTTP :
+In the below diagram you can see that any person in the network can request the data from any other person in the network.
+On the other hand in HTTP the client can access the data only through the server.
+
+
+table:
+IPFS
+-> Content Addressing 
+-> No one control it
+-> Efficient
+-> Data is persistent
+-> Cannot go down
+
+HTTP
+-> Location Addressing
+-> Controlled by the location owner
+-> Not efficient
+-> Data is not persistent
+-> Can go down
+
+Working of IPFS:
+The machine that runs IPFS software to store and retrieve files from the IPFS network is called the IPFS node.
+
+Initially lets say any node add a image file to IPFS. 
+Now the data is in the cache of that node.
+Now the other node can request for this data from A.
+If a node is connected to more than one node and the data is available to more than one node then it will take the datt form all the node in parts.
+this all things are managed by IPFS protocol.
+
+If some of the node will get off the data could be retrieved from the others unlike server.
+
+
+
+Install....Uploading file...Pin files using IPFS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

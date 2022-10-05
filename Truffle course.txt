@@ -1,0 +1,121 @@
+Truffle course:
+ 
+Prerequsite...
+installation of required softwares like nodejs, metamask, ganache, truffle, ...
+
+when we install truffle using-> npm install -g truffle 
+it will also install 
+solidity compiler, 
+Node,
+Web3.js
+integrated with the same package.
+
+1) create a folder named Ethereum.
+2) create another folder named web inside Ethereum.
+3) run command init truffle in web diectory.
+4) you will get folders of contracts, migration, test and a file tuffle-config.
+5) creating basic demo.sol file in contracts.
+6) if the solidity compiler version is older in tuffle-config file we can change it. Also keep the same compiler in pragma line of code.
+7) To compile using truffle. Run command truffle compile in web directory.
+8) It will create a build folder in web. Build folder will have .json file of all the contracts ...demo.json
+9) we know that whenever we put our contract in solidity compiler, it will create two files (abi and code). demo.json will have the abi and byte code.
+
+Now we will talk about deployment on ganache.
+10) when we talk about deployment we talk about migrations folder.
+11) migrations folder will have a default 1_initial_migration.js file corresponding to the default migration.sol contract.
+(1 wali file pehle execute hogi 2 wali baad me, jisko pehle execute karana he uka name accordingly rakhna hota he)
+12) we will create a similar .js file for our demo.sol file.
+13) befor migrating it to ganache we need to do some changes to our truffle-config.js file.
+14) In network section-> In development section-> change host, port(7545) and network_id(*) as per the ganache.
+
+Note:- keep your ganache on while doing migration.
+
+15) Run truffle migrate in web. Also we dont need to compile, if we are migrating.
+
+we will get all the details in terminal.
+amount of eth we be deducted in ganache.
+
+16) Agar kuch change karne ke baad firse migrate karne pe 'Network uptodate' show kare to truffle migrate --reset command use krna he.
+
+17) Note that migration is not taking time as it is happening on ganache (i.e on our system). test net pe ya mainnet pe karte to thoda time lag jata.
+
+Now we will talk about Infura:
+
+18) So infura is a full node jiski help se hum apne smart contract ko mainnet pe ya testnet pe easily connect, deploy kar pate he.
+
+19) In remix ide, when we click on injected web3, with the help of injected web3 we can connet with our metamask which is a light node, which can further connect us with mainnet or testnet.
+
+20) create new project in infura. choose endpoint. copy the link.
+ 
+21) we are using ropsten testnetwork. use ropsten faucet to get the test ether in your account.
+
+22) Now since we are using ropsten testnet and not ganache, so we need to uncomment the ropsten field in truffle-config.js and comment the previous development wali field.
+
+23) we can use any other testnet, just put the info(endpoint url, network_id,) accordingly.
+
+24) define(uncomment) your mnemonic(iske through hi hum apna metamask wallet access kar pate he, its like humari private key)
+
+25) uncomment hdwalletprovider.(its like requesting a package which helps us to connect truffle with infura)
+Also this package needs to be installed by us, so run command npm install @truffle/hdwallet-provider in web.
+
+26) mnemonics should be read from a file(.secret file), and not displaying the mnemonics.
+
+27) also while posting on github we dont put our .secret file, instead put it in a folder called rod or something like that.
+
+28) Now we will start deployment proccess, use command truffle migrate --network ropsten.
+It will take some time as its not our local blockchain.
+
+29) Ether will get deducted in our metamask. Mnemonic se hi truffle ko pata chala ki kis account se Ether deduct karna he.
+
+30) we can check the details using our smart contract address on etherscan website.
+
+
+Now we will see how to integrate front end with our smart contract. we will use react js for front end. Its just a video to explain the proccess no need to know reactjs.
+
+1) Go to truffle suite.
+2) It provides many types of framwork. Front end integration becomes easy with truffle. We will select react and then follow the steps to install it in a folder in our project.
+3) In web folder we will create a frontend folder.
+4) Now we will install our reactjs box in frontend folder.
+command -> truffle unbox react
+
+5) Some files and folders will appear in frontend folder.
+
+6) there will be a truffle-config.js file which wil be smaller and different from the previous one.
+
+7) Is truffle-config.js file me bataya gaya he ki kis tarah se deployment ka proccess hoga or kaha pe .json file banegi (abi or byte code wali).
+since we will use ganache, therefore we will change port to 7545.
+
+8) There will be contracts, client, migration, and test folders.
+Since we can not change the contract once deployed, its important to test the contract.
+
+9) client folder will have all the react related things. 
+
+10) Now when we will run truffle compile command, we will get the contract folder having .json(byte code or abi wali) file inside src folder inside client folder.
+
+11) Client side pe hi smart contract se baat karni hoti he isliye is baar ye jo abi or bytecode he wo client me laya gaya he.
+
+12) Now we will migrate. Run truffle migrate (remember to on ganache) 
+
+13) Now run npm start in client directory. It will open the browser. 
+
+14) Now we need to work through metamask. Firstly we might get error...why? because we have deployed our contract on ganache, but since our metamask is connected  to some other testnet. We need to connect metamask to ganache.For that go to constum RPC, give the required info and save it. Now import the account from ganache. You can see the ganache account on metamask.
+
+15) Finally our smart contract is connected to our frontend with help of truffle.
+
+16) Go through the App.js...try to understand as much as possible.
+
+
+Revision:
+1) you must be in client folder to run the react app (i.e npm start)
+
+2) If there is some unexpected result. Just do stop the app, run truffle migrate --reset and npm start.
+
+Few changes in reactjs.
+
+....Completed....
+
+
+
+
+
+ 

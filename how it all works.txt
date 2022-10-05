@@ -1,0 +1,35 @@
+how does our normal computer becomes such a powerful system which can interect with all the nodes in blockchain.
+
+For our computer to interect with a blockchain requires a software i.e. client (Go, Parity -> for ethereum).
+
+After installing these software our computer becomes node. but in our internal duniya or computer ki duniya it is called as evm.
+These EVM provides two important things -> State : (database), puri ki puri blockchain jo abhi tak ban chuki he use apne computer pe store karna hota he or wo store hota he state me.
+-> Mempool : Stores transaction, miners takes it from here.
+
+these is how our normal computer becomes a node...now it can take or send data to blockchain. and communicate with all the other nodes.
+----------------------------------------
+
+Truffle 
+->provides truffle console
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
